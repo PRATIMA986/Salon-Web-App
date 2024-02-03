@@ -1,0 +1,95 @@
+<html>
+    <head>
+
+        <title>
+            PROJECT
+        </title>
+
+        
+        <link rel="stylesheet" href="/static/style 01.css">
+
+    </head>
+
+    <body>
+
+        <div class="topnav">
+        <a class="active" href="/">Home</a>
+        </div>
+
+        <script src="script.js"></script>
+        <div class="container4;">
+        
+        <div class="container3">
+            <form method="POST" action="{% url 'savedetails' %}" class="form" id="CreateAccount">
+                {% csrf_token %}
+                <h1 class="form__title">Create Account</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" name="name" id="signupUsername" class="input__form" autofocus placeholder="username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" name="email" class="input__form" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" name="password" class="input__form" autofocus placeholder="password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" name="conpassword" class="input__form" autofocus placeholder="Confirm password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="tel" name="mobno" class="input__form" autofocus placeholder="Mobile number">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <textarea rows="5" name="address" cols="10" class="input__form" autofocus placeholder="Address"></textarea>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group"> 
+                    <input type="text" name="city" class="input__form" autofocus placeholder="City"></input>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" name="state" class="input__form" autofocus placeholder="State"></input>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="tel" name="pincode" class="input__form" autofocus placeholder="Pincode"></input>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <select type="dropdown" name="country" class="input__form" autofocus placeholder="country">
+                         <option>Afganistan</option>
+                         <option>India</option>
+                         
+                     </select>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" name="cname" class="input__form" autofocus placeholder="Company name"/>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" name="Occupation" class="input__form" autofocus placeholder="Occupation"/>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="number" name="yoe" class="input__form">Years of experience/>
+                    <div class="form__input-error-message"></div>
+                </div>
+
+                <button class="form__button" type="submit">Sign Up</button>
+                
+                
+                 <p class="form__text">
+                     Already have an account?<a class="form__link" href="/login/" id="LinkCreatAccount"> Log in</a>
+                 </p>
+            </form>
+
+            <div class="container4"> </div>
+        </div></div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Odd</title>
+    <style>
+        form{
+            background-color:#D0A2F7;
+            border-radius:20px;
+            margin-left:500px;
+            margin-top:150px;
+            margin-bottom:50px;
+            margin-right:800px;
+            
+        }
+
+        .container{
+            height:300px;
+            width:300px;
+            text-align:center;
+            padding:40px;
+
+        }
+
+        input{
+            border-radius:5px; 
+        }
+
+        button{
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" class="container">
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+                Please enter the value
+        </div> 
+        {% endif %}
+        {% csrf_token %}
+
+        <div>
+            <h3> value1</h3>
+             <input type="text" name="num" >
+            
+         </div> 
+ 
+         <br>
+        
+         <button  type="submit">Even | Odd</button>
+         <br>
+
+         <h3>output</h3>
+        <input type="text" value={{c}} />
+ 
+
+    </form>
+</body>
+</html>

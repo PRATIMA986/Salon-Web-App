@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+  <form method="POST" action="{% url 'submitform' %}">
+    {% csrf_token %}
+    {{form}}
+        
+        {% comment %} <div>
+            <h3> value1</h3>
+            <input type="text" value="{{n1}}" name="num1">
+            
+        </div>
+        
+        <br>
+        
+        <div>
+           <h3> value2</h3>
+            <input type="text" value="{{n2}}" name="num2">
+           
+        </div> {% endcomment %}
+
+        <br>
+        <h3>output</h3>
+        <input type="text" value="{{output}}"/>
+        <button  type="submit">Save</button>
+
+  </form>
+
+
+</body>
+</html>
+
+
+
+
+

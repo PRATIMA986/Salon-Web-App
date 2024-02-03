@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Master</title>
+    <style>
+        form{
+            background-color: #BFCFE7;
+            border-radius:20px;
+            margin-left:440px;
+            margin-top:50px;
+            margin-bottom:50px;
+
+        }
+
+        .container1{
+            height:670px;
+            width:450px;
+            text-align:center;
+            padding:20px;
+
+        }
+
+        input{
+            border-radius:5px; 
+        }
+
+        button{
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" class="container1">
+        {% csrf_token %}
+        <div>
+            <h3>Subject 1</h3>
+             <input type="text"  name="sub1">
+        </div>
+            
+        <div>
+            <h3>Subject 2</h3>
+             <input type="text"  name="sub2">
+        </div>
+
+        <div>
+            <h3>Subject 3</h3>
+             <input type="text"  name="sub3">
+        </div>
+
+        <div>
+            <h3>Subject 4</h3>
+             <input type="text"  name="sub4">
+        </div>
+
+        <div>
+            <h3>Subject 5</h3>
+             <input type="text"  name="sub5">
+        </div>
+        <br>
+        <button  type="submit">Calculate</button>
+
+        <div>
+            <h3>Total</h3>
+             <input type="text" value="{{total}}" name="total">
+        </div>
+
+        <div>
+            <h3>Percentage</h3>
+             <input type="text" value="{{per}}" name="perc">
+        </div>
+
+        <div>
+            <h3>Division</h3>
+             <input type="text" value="{{div}}" name="division">
+        </div>
+
+
+
+    </form>
+</body>
+</html>
